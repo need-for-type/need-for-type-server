@@ -1,24 +1,13 @@
-# README
+# need-for-type-server
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+need-for-type server for managing highscores, users, etc...
 
-Things you may want to cover:
+## Development
 
-* Ruby version
+To get up and running follow these steps:
 
-* System dependencies
+1. Install and start Docker
+2. Copy `.env.example` to `.env`
+3. Run `docker-compose up` to start the server
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run commands inside the containers use `docker-compose exec container_name command`
