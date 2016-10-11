@@ -1,6 +1,6 @@
 # need-for-type-server
 
-need-for-type server for managing highscores, users, etc...
+need-for-type server used for high score management 
 
 ## Development
 

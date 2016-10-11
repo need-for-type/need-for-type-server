@@ -4,4 +4,8 @@ class Score < ApplicationRecord
   validates :wpm, presence: true
   validates :time, presence: true
   validates :accuracy, presence: true
+
+  def position
+    Score.where("text_id = #{self.text_id} AND wpm > #{self.wpm}").count + 1
+  end
 end

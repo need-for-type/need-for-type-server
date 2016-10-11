@@ -1,11 +1,11 @@
 module Api::V1 
   class ScoresController < ApplicationController
     def index
-      @scores = Score.where(text_id: params[:text_id])
-                     .order(:wpm)
-                     .limit(5)
+      @top_scores = Score.where(text_id: params[:text_id])
+                         .order(wpm: :desc)
+                         .limit(5)
 
-      render json: @scores
+      render json: @top_scores
     end
 
     def create
