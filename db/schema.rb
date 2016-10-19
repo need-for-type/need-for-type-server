@@ -10,12 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160925174952) do
+ActiveRecord::Schema.define(version: 20161011132224) do
 
-  create_table "highscores", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "scores", force: :cascade do |t|
     t.string   "username"
+    t.integer  "text_id"
     t.integer  "wpm"
-    t.decimal  "accuracy"
+    t.float    "time"
+    t.float    "accuracy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

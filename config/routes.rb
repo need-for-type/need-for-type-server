@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  scope module: 'api' do
-    namespace :v1 do
-      get :highscores, to: 'highscores#index'
-      post :highscores, to: 'highscores#create'
+  #constraints subdomain: 'api' do
+    scope module: 'api' do
+      namespace :v1 do
+        resources :scores, only: [:index, :create]
+      end
     end
-  end
+  #end
 end
